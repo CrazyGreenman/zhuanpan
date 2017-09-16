@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./112233.css">
+    <link rel="stylesheet" href="./112233.js">
+</head>
+<style>
+      /*div {
+          width: 50px;
+          height: 50px;
+          background: red;
+          margin-top: 100px;
+
+      }
+      img{
+          position: absolute;
+          width: 100px;
+          height: 100px;
+          left: -80px;
+          opacity: 0;
+          transition: all 1.5s linear ;
+      }
+      #demo{
+          top: 0px;
+      }
+      #demo2{
+          top: 200px;
+      }
+      div:hover{
+          width:200px;
+          height: 200px;
+      }
+      div:hover + img{
+         transform:translatex(200px);
+         opacity: 1;
+      }*/
+    /*.demo3{
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: red;
+        animation: Move 2s linear alternate 1 ;
+    }
+    @keyframes Move{
+       0%{left: 0px;}
+       100%{left: 300px;}
+    }*/
+    /*span{
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        display: block;
+        width:20px;
+        height: 200px;
+        background: #000;
+
+    }
+    div{
+        position: absolute;
+        top: 0px;
+        left: 85px;
+        width:50px;
+        height: 50px;
+        background: orange;
+        border-radius: 50%;
+        animation: move 1s linear 2s backwards;
+    }
+    @keyframes move{
+        0%{
+            top: 100px;
+        }
+        100%{
+            top: 250px;
+        }
+    }
+    div:hover{
+        animation-play-state: paused;
+    }*/
+.span{
+    position: absolute;
+    top: 50px;
+    left: 140px;
+    width: 20px;
+    height: 100px;
+    background: #000;
+    transform-origin: top ;
+    transform: rotatez(-45deg);
+    transition: all 1s linear;
+
+}
+div{
+    position: absolute;
+    top: 130px;
+    left: 100px;
+    width:100px;
+    height: 100px;
+    border-radius: 50%;
+    background: orange;
+    animation: run 3s linear infinite;
+    text-align: center;   
+    animation-play-state: paused;
+}
+/*div{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius:50%;
+    background: orange;
+    animation: run 5s linear infinite;
+    text-align: center;
+}*/
+@keyframes run{
+    0%{
+        transform:rotatez(0deg)
+        }
+    100%{
+        transform:rotatez(360deg)
+        }
+}
+.run{
+    transform: rotatez(0deg)
+}
+
+</style>
+<body>
+    <!--<div class="demo">qqq</div>
+    <img id="demo" src="./1.png" alt="">
+    <div class="demo2">图片</div>
+    <img  id="demo2" src="./2.png" alt="">-->
+    <!--<div class="demo3">333</div>-->
+ <!--<span></span>
+ <div></div>
+ <button>开始运动</button>-->
+
+ <div>
+     <h3>11</h3>
+ </div>
+ <span class="span"></span>
+ <button>开始</button>
+  
+ <script>
+ var oBtn = document.getElementsByTagName('button')[0];
+ var oDiv = document.getElementsByTagName('div')[0];
+ var oSpan = document.getElementsByTagName('span')[0];
+ flag = true;
+     oBtn.onclick = function(){
+             flag = !flag;
+         
+         if(flag){
+          
+             oDiv.style.animationPlayState = 'running';
+             oSpan.className ='span run'
+
+             
+         }else{
+             oDiv.style.animationPlayState = 'paused';
+             oSpan.className = 'span'
+         }
+     
+     oSpan.style.animation
+ }
+ </script>
+
+</body>
+</html>
